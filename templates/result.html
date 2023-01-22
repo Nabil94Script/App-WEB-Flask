@@ -1,0 +1,1285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Start your development with LeadMark landing page.">
+    <meta name="author" content="Devcrud">
+    <title>NBA Prediction</title>
+    <!-- font icons -->
+   
+    <!-- Bootstrap + LeadMark main styles -->
+	<link rel="stylesheet" href="static/NBAF.css">
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="20" id="home">
+
+        <!-- page Navigation -->
+        <nav class="navbar custom-navbar navbar-expand-md navbar-light fixed-top" data-spy="affix" data-offset-top="10">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                  
+                </a>
+                <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto"> 
+                      
+                            <li class="nav-item">
+                              <a class="nav-link" href="{{url_for('Page.Page')}}">Home</a>
+                            </li>
+                                
+                            <li class="nav-item">
+                              <a class="nav-link" href="{{url_for('Predict.Predict')}}">Predict</a>
+                            </li>
+                            <li class="nav-item">       
+                               <a class="nav-link" href="{{url_for('Result.Result')}}">Result</a>
+                            </li>                   
+   
+
+                    </ul>
+    
+            </div>
+        </nav>
+    
+    <!-- Page Header -->
+    <header class="header">
+        <div class="overlay">
+            <h1 class="title">NBA performance</h1> 
+            <h1 class="subtitle">predicting the performance of your players</h1>
+            <form action="\result" method="post" enctype="multipart/form-data"> 
+              <hr> 
+              <hr> 
+              <hr>             
+                <h1 style="text-align:center;">Result of predection:</h1>   
+  
+              </form>
+        </div>  
+
+      </div>  
+      <div class="shape">
+          <svg viewBox="0 0 1500 200">
+              <path d="m 0,240 h 1500.4828 v -71.92164 c 0,0 -286.2763,-81.79324 -743.19024,-81.79324 C 300.37862,86.28512 0,168.07836 0,168.07836 Z"/>
+          </svg>
+      </div>  
+      <div class="mouse-icon"><div class="wheel"></div></div>
+      
+    </header>
+    <!-- End Of Page Header -->
+      <center>
+   <table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Name_player</th>
+      <th>Preduction</th>
+      <th>comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Brandon Ingram</td>
+      <td>1.0</td>
+      <td>Most likely is a good player</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Andrew Harrison</td>
+      <td>0.0</td>
+      <td>Most likely is a bad player</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>JaKarr Sampson</td>
+      <td>0.0</td>
+      <td>Most likely is a bad player</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Malik Sealy</td>
+      <td>1.0</td>
+      <td>Most likely is a good player</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Matt Geiger</td>
+      <td>1.0</td>
+      <td>Most likely is a good player</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>Tony Bennett</td>
+      <td>1.0</td>
+      <td>Most likely is a good player</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>Don MacLean</td>
+      <td>1.0</td>
+      <td>Most likely is a good player</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>Tracy Murray</td>
+      <td>0.0</td>
+      <td>Most likely is a bad player</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>Duane Cooper</td>
+      <td>0.0</td>
+      <td>Most likely is a bad player</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>Dave Johnson</td>
+      <td>0.0</td>
+      <td>Most likely is a bad player</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>Corey Williams</td>
+      <td>0.0</td>
+      <td>Most likely is a bad player</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>Sam Mack</td>
+      <td>0.0</td>
+      <td>Most likely is a bad player</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>Lorenzo Williams</td>
+      <td>1.0</td>
+      <td>Most likely is a good player</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>P.J. Hairston</td>
+      <td>0.0</td>
+      <td>Most likely is a bad player</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>Elmore Spencer</td>
+      <td>0.0</td>
+      <td>Most likely is a bad player</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>John Crotty</td>
+      <td>0.0</td>
+      <td>Most likely is a bad player</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>Stephen Howard</td>
+      <td>0.0</td>
+      <td>Most likely is a bad player</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>Randy Woods</td>
+      <td>0.0</td>
+      <td>Most likely is a bad player</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>Larry Johnson</td>
+      <td>1.0</td>
+      <td>Most likely is a good player</td>
+    </tr>
+    <tr>
+      <th>19</th>
+      <td>Larry Johnson</td>
+      <td>1.0</td>
+      <td>Most likely is a good player</td>
+    </tr>
+    <tr>
+      <th>20</th>
+      <td>Billy Owens</td>
+      <td>1.0</td>
+      <td>Most likely is a good player</td>
+    </tr>
+    <tr>
+      <th>21</th>
+      <td>Stacey Augmon</td>
+      <td>1.0</td>
+      <td>Most likely is a good player</td>
+    </tr>
+    <tr>
+      <th>22</th>
+      <td>Mark Macon</td>
+      <td>1.0</td>
+      <td>Most likely is a good player</td>
+    </tr>
+    <tr>
+      <th>23</th>
+      <td>Steven Smith</td>
+      <td>1.0</td>
+      <td>Most likely is a good player</td>
+    </tr>
+    <tr>
+      <th>24</th>
+      <td>Mitch McGary</td>
+      <td>1.0</td>
+      <td>Most likely is a good player</td>
+    </tr>
+    <tr>
+      <th>25</th>
+      <td>Larry Stewart</td>
+      <td>1.0</td>
+      <td>Most likely is a good player</td>
+    </tr>
+    <tr>
+      <th>26</th>
+      <td>Mike Iuzzolino</td>
+      <td>1.0</td>
+      <td>Most likely is a good player</td>
+    </tr>
+    <tr>
+      <th>27</th>
+      <td>Doug Smith</td>
+      <td>1.0</td>
+      <td>Most likely is a good player</td>
+    </tr>
+    <tr>
+      <th>28</th>
+      <td>Paul Graham</td>
+      <td>1.0</td>
+      <td>Most likely is a good player</td>
+    </tr>
+    <tr>
+      <th>29</th>
+      <td>Donald Hodge</td>
+      <td>1.0</td>
+      <td>Most likely is a good player</td>
+    </tr>
+    <tr>
+      <th>30</th>
+      <td>Dale Davis</td>
+      <td>1.0</td>
+      <td>Most likely is a good player</td>
+    </tr>
+    <tr>
+      <th>31</th>
+      <td>Stanley Roberts</td>
+      <td>1.0</td>
+      <td>Most likely is a good player</td>
+    </tr>
+    <tr>
+      <th>32</th>
+      <td>Terrell Brandon</td>
+      <td>1.0</td>
+      <td>Most likely is a good player</td>
+    </tr>
+    <tr>
+      <th>33</th>
+      <td>Bison Dele</td>
+      <td>1.0</td>
+      <td>Most likely is a good player</td>
+    </tr>
+    <tr>
+      <th>34</th>
+      <td>Spencer Dinwiddie</td>
+      <td>0.0</td>
+      <td>Most likely is a bad player</td>
+    </tr>
+    <tr>
+      <th>35</th>
+      <td>Tracy Moore</td>
+      <td>1.0</td>
+      <td>Most likely is a good player</td>
+    </tr>
+    <tr>
+      <th>36</th>
+      <td>Greg Anthony</td>
+      <td>1.0</td>
+      <td>Most likely is a good player</td>
+    </tr>
+    <tr>
+      <th>37</th>
+      <td>Kenny Anderson</td>
+      <td>1.0</td>
+      <td>Most likely is a good player</td>
+    </tr>
+    <tr>
+      <th>38</th>
+      <td>Victor Alexander</td>
+      <td>1.0</td>
+      <td>Most likely is a good player</td>
+    </tr>
+    <tr>
+      <th>39</th>
+      <td>David Benoit</td>
+      <td>1.0</td>
+      <td>Most likely is a good player</td>
+    </tr>
+    <tr>
+      <th>40</th>
+      <td>Kevin Lynch</td>
+      <td>0.0</td>
+      <td>Most likely is a bad player</td>
+    </tr>
+    <tr>
+      <th>41</th>
+      <td>LaBradford Smith</td>
+      <td>0.0</td>
+      <td>Most likely is a bad player</td>
+    </tr>
+    <tr>
+      <th>42</th>
+      <td>Chris Corchiani</td>
+      <td>0.0</td>
+      <td>Most likely is a bad player</td>
+    </tr>
+    <tr>
+      <th>43</th>
+      <td>Travis Wear</td>
+      <td>0.0</td>
+      <td>Most likely is a bad player</td>
+    </tr>
+    <tr>
+      <th>44</th>
+      <td>Robert Pack</td>
+      <td>1.0</td>
+      <td>Most likely is a good player</td>
+    </tr>
+    <tr>
+      <th>45</th>
+      <td>Pete Chilcutt</td>
+      <td>1.0</td>
+      <td>Most likely is a good player</td>
+    </tr>
+    <tr>
+      <th>46</th>
+      <td>Chris Gatling</td>
+      <td>1.0</td>
+      <td>Most likely is a good player</td>
+    </tr>
+    <tr>
+      <th>47</th>
+      <td>Tharon Mayes</td>
+      <td>0.0</td>
+      <td>Most likely is a bad player</td>
+    </tr>
+    <tr>
+      <th>48</th>
+      <td>Eric Murdock</td>
+      <td>0.0</td>
+      <td>Most likely is a bad player</td>
+    </tr>
+    <tr>
+      <th>49</th>
+      <td>Randy Brown</td>
+      <td>0.0</td>
+      <td>Most likely is a bad player</td>
+    </tr>
+    <tr>
+      <th>50</th>
+      <td>Greg Sutton</td>
+      <td>0.0</td>
+      <td>Most likely is a bad player</td>
+    </tr>
+    <tr>
+      <th>51</th>
+      <td>Elliot Perry</td>
+      <td>0.0</td>
+      <td>Most likely is a bad player</td>
+    </tr>
+    <tr>
+      <th>52</th>
+      <td>Marty Conlon</td>
+      <td>1.0</td>
+      <td>Most likely is a good player</td>
+    </tr>
+    <tr>
+      <th>53</th>
+      <td>Rodney Monroe</td>
+      <td>0.0</td>
+      <td>Most likely is a bad player</td>
+    </tr>
+    <tr>
+      <th>54</th>
+      <td>John Turner</td>
+      <td>1.0</td>
+      <td>Most likely is a good player</td>
+    </tr>
+    <tr>
+      <th>55</th>
+      <td>Mark Randall</td>
+      <td>0.0</td>
+      <td>Most likely is a bad player</td>
+    </tr>
+    <tr>
+      <th>56</th>
+      <td>Sean Green</td>
+      <td>0.0</td>
+      <td>Most likely is a bad player</td>
+    </tr>
+    <tr>
+      <th>57</th>
+      <td>Kevin Brooks</td>
+      <td>0.0</td>
+      <td>Most likely is a bad player</td>
+    </tr>
+    <tr>
+      <th>58</th>
+      <td>Doug Lee</td>
+      <td>0.0</td>
+      <td>Most likely is a bad player</td>
+    </tr>
+    <tr>
+      <th>59</th>
+      <td>Corey Crowder</td>
+      <td>0.0</td>
+      <td>Most likely is a bad player</td>
+    </tr>
+    <tr>
+      <th>60</th>
+      <td>Rich King</td>
+      <td>0.0</td>
+      <td>Most likely is a bad player</td>
+    </tr>
+    <tr>
+      <th>61</th>
+      <td>Stephen Thompson</td>
+      <td>0.0</td>
+      <td>Most likely is a bad player</td>
+    </tr>
+    <tr>
+      <th>62</th>
+      <td>Charles Thomas</td>
+      <td>0.0</td>
+      <td>Most likely is a bad player</td>
+    </tr>
+    <tr>
+      <th>63</th>
+      <td>Lionel Simmons</td>
+      <td>1.0</td>
+      <td>Most likely is a good player</td>
+    </tr>
+    <tr>
+      <th>64</th>
+      <td>Gary Harris</td>
+      <td>0.0</td>
+      <td>Most likely is a bad player</td>
+    </tr>
+    <tr>
+      <th>65</th>
+      <td>Derrick Coleman</td>
+      <td>1.0</td>
+      <td>Most likely is a good player</td>
+    </tr>
+    <tr>
+      <th>66</th>
+      <td>Travis Mays</td>
+      <td>1.0</td>
+      <td>Most likely is a good player</td>
+    </tr>
+    <tr>
+      <th>67</th>
+      <td>Dennis Scott</td>
+      <td>1.0</td>
+      <td>Most likely is a good player</td>
+    </tr>
+    <tr>
+      <th>68</th>
+      <td>Gary Payton*</td>
+      <td>1.0</td>
+      <td>Most likely is a good player</td>
+    </tr>
+    <tr>
+      <th>69</th>
+      <td>Felton Spencer</td>
+      <td>1.0</td>
+      <td>Most likely is a good player</td>
+    </tr>
+    <tr>
+      <th>70</th>
+      <td>Willie Burton</td>
+      <td>1.0</td>
+      <td>Most likely is a good player</td>
+    </tr>
+    <tr>
+      <th>71</th>
+      <td>Dee Brown</td>
+      <td>1.0</td>
+      <td>Most likely is a good player</td>
+    </tr>
+    <tr>
+      <th>72</th>
+      <td>Dee Brown</td>
+      <td>1.0</td>
+      <td>Most likely is a good player</td>
+    </tr>
+    <tr>
+      <th>73</th>
+      <td>Dee Brown</td>
+      <td>0.0</td>
+      <td>Most likely is a bad player</td>
+    </tr>
+    <tr>
+      <th>74</th>
+      <td>Dee Brown</td>
+      <td>0.0</td>
+      <td>Most likely is a bad player</td>
+    </tr>
+    <tr>
+      <th>75</th>
+      <td>Kendall Gill</td>
+      <td>1.0</td>
+      <td>Most likely is a good player</td>
+    </tr>
+    <tr>
+      <th>76</th>
+      <td>Duane Causwell</td>
+      <td>1.0</td>
+      <td>Most likely is a good player</td>
+    </tr>
+    <tr>
+      <th>77</th>
+      <td>Mahmoud Abdul-Rauf</td>
+      <td>1.0</td>
+      <td>Most likely is a good player</td>
+    </tr>
+    <tr>
+      <th>78</th>
+      <td>A.J. English</td>
+      <td>1.0</td>
+      <td>Most likely is a good player</td>
+    </tr>
+    <tr>
+      <th>79</th>
+      <td>Danny Ferry</td>
+      <td>1.0</td>
+      <td>Most likely is a good player</td>
+    </tr>
+    <tr>
+      <th>80</th>
+      <td>Mario Elie</td>
+      <td>1.0</td>
+      <td>Most likely is a good player</td>
+    </tr>
+    <tr>
+      <th>81</th>
+      <td>Anthony Cook</td>
+      <td>1.0</td>
+      <td>Most likely is a good player</td>
+    </tr>
+    <tr>
+      <th>82</th>
+      <td>Gerald Paddio</td>
+      <td>1.0</td>
+      <td>Most likely is a good player</td>
+    </tr>
+    <tr>
+      <th>83</th>
+      <td>Bimbo Coles</td>
+      <td>1.0</td>
+      <td>Most likely is a good player</td>
+    </tr>
+    <tr>
+      <th>84</th>
+      <td>Bo Kimble</td>
+      <td>1.0</td>
+      <td>Most likely is a good player</td>
+    </tr>
+    <tr>
+      <th>85</th>
+      <td>Alec Kessler</td>
+      <td>1.0</td>
+      <td>Most likely is a good player</td>
+    </tr>
+    <tr>
+      <th>86</th>
+      <td>Loy Vaught</td>
+      <td>1.0</td>
+      <td>Most likely is a good player</td>
+    </tr>
+    <tr>
+      <th>87</th>
+      <td>Tyrone Hill</td>
+      <td>1.0</td>
+      <td>Most likely is a good player</td>
+    </tr>
+    <tr>
+      <th>88</th>
+      <td>Marcus Liberty</td>
+      <td>1.0</td>
+      <td>Most likely is a good player</td>
+    </tr>
+    <tr>
+      <th>89</th>
+      <td>Terry Mills</td>
+      <td>1.0</td>
+      <td>Most likely is a good player</td>
+    </tr>
+    <tr>
+      <th>90</th>
+      <td>Jamal Robinson</td>
+      <td>0.0</td>
+      <td>Most likely is a bad player</td>
+    </tr>
+    <tr>
+      <th>91</th>
+      <td>Henry James</td>
+      <td>1.0</td>
+      <td>Most likely is a good player</td>
+    </tr>
+    <tr>
+      <th>92</th>
+      <td>Jerrod Mustaf</td>
+      <td>1.0</td>
+      <td>Most likely is a good player</td>
+    </tr>
+    <tr>
+      <th>93</th>
+      <td>Kevin Pritchard</td>
+      <td>0.0</td>
+      <td>Most likely is a bad player</td>
+    </tr>
+    <tr>
+      <th>94</th>
+      <td>Gerald Glass</td>
+      <td>1.0</td>
+      <td>Most likely is a good player</td>
+    </tr>
+    <tr>
+      <th>95</th>
+      <td>Larry Robinson</td>
+      <td>0.0</td>
+      <td>Most likely is a bad player</td>
+    </tr>
+    <tr>
+      <th>96</th>
+      <td>Jud Buechler</td>
+      <td>1.0</td>
+      <td>Most likely is a good player</td>
+    </tr>
+    <tr>
+      <th>97</th>
+      <td>Cedric Ceballos</td>
+      <td>1.0</td>
+      <td>Most likely is a good player</td>
+    </tr>
+    <tr>
+      <th>98</th>
+      <td>Kyle Anderson</td>
+      <td>0.0</td>
+      <td>Most likely is a bad player</td>
+    </tr>
+    <tr>
+      <th>99</th>
+      <td>Greg Foster</td>
+      <td>1.0</td>
+      <td>Most likely is a good player</td>
+    </tr>
+    <tr>
+      <th>100</th>
+      <td>Brian Oliver</td>
+      <td>0.0</td>
+      <td>Most likely is a bad player</td>
+    </tr>
+    <tr>
+      <th>101</th>
+      <td>Howard Wright</td>
+      <td>0.0</td>
+      <td>Most likely is a bad player</td>
+    </tr>
+    <tr>
+      <th>102</th>
+      <td>Tony Smith</td>
+      <td>1.0</td>
+      <td>Most likely is a good player</td>
+    </tr>
+    <tr>
+      <th>103</th>
+      <td>Tate George</td>
+      <td>0.0</td>
+      <td>Most likely is a bad player</td>
+    </tr>
+    <tr>
+      <th>104</th>
+      <td>Rick Calloway</td>
+      <td>0.0</td>
+      <td>Most likely is a bad player</td>
+    </tr>
+    <tr>
+      <th>105</th>
+      <td>Steve Henson</td>
+      <td>1.0</td>
+      <td>Most likely is a good player</td>
+    </tr>
+    <tr>
+      <th>106</th>
+      <td>Andy Toolson</td>
+      <td>0.0</td>
+      <td>Most likely is a bad player</td>
+    </tr>
+    <tr>
+      <th>107</th>
+      <td>Jayson Williams</td>
+      <td>1.0</td>
+      <td>Most likely is a good player</td>
+    </tr>
+    <tr>
+      <th>108</th>
+      <td>Kennard Winchester</td>
+      <td>0.0</td>
+      <td>Most likely is a bad player</td>
+    </tr>
+    <tr>
+      <th>109</th>
+      <td>Johnny O'Bryant</td>
+      <td>0.0</td>
+      <td>Most likely is a bad player</td>
+    </tr>
+    <tr>
+      <th>110</th>
+      <td>Dwayne Schintzius</td>
+      <td>0.0</td>
+      <td>Most likely is a bad player</td>
+    </tr>
+    <tr>
+      <th>111</th>
+      <td>Sean Higgins</td>
+      <td>0.0</td>
+      <td>Most likely is a bad player</td>
+    </tr>
+    <tr>
+      <th>112</th>
+      <td>Elden Campbell</td>
+      <td>1.0</td>
+      <td>Most likely is a good player</td>
+    </tr>
+    <tr>
+      <th>113</th>
+      <td>Kenny Williams</td>
+      <td>1.0</td>
+      <td>Most likely is a good player</td>
+    </tr>
+    <tr>
+      <th>114</th>
+      <td>Keith Askins</td>
+      <td>0.0</td>
+      <td>Most likely is a bad player</td>
+    </tr>
+    <tr>
+      <th>115</th>
+      <td>Scott Williams</td>
+      <td>1.0</td>
+      <td>Most likely is a good player</td>
+    </tr>
+    <tr>
+      <th>116</th>
+      <td>Richard Coffey</td>
+      <td>0.0</td>
+      <td>Most likely is a bad player</td>
+    </tr>
+    <tr>
+      <th>117</th>
+      <td>Steve Scheffler</td>
+      <td>1.0</td>
+      <td>Most likely is a good player</td>
+    </tr>
+    <tr>
+      <th>118</th>
+      <td>David Robinson*</td>
+      <td>1.0</td>
+      <td>Most likely is a good player</td>
+    </tr>
+    <tr>
+      <th>119</th>
+      <td>James Young</td>
+      <td>0.0</td>
+      <td>Most likely is a bad player</td>
+    </tr>
+    <tr>
+      <th>120</th>
+      <td>Tim Hardaway</td>
+      <td>1.0</td>
+      <td>Most likely is a good player</td>
+    </tr>
+    <tr>
+      <th>121</th>
+      <td>Tim Hardaway</td>
+      <td>1.0</td>
+      <td>Most likely is a good player</td>
+    </tr>
+    <tr>
+      <th>122</th>
+      <td>J.R. Reid</td>
+      <td>1.0</td>
+      <td>Most likely is a good player</td>
+    </tr>
+    <tr>
+      <th>123</th>
+      <td>Pooh Richardson</td>
+      <td>1.0</td>
+      <td>Most likely is a good player</td>
+    </tr>
+    <tr>
+      <th>124</th>
+      <td>Sherman Douglas</td>
+      <td>1.0</td>
+      <td>Most likely is a good player</td>
+    </tr>
+    <tr>
+      <th>125</th>
+      <td>Sam Mitchell</td>
+      <td>1.0</td>
+      <td>Most likely is a good player</td>
+    </tr>
+    <tr>
+      <th>126</th>
+      <td>Glen Rice</td>
+      <td>1.0</td>
+      <td>Most likely is a good player</td>
+    </tr>
+    <tr>
+      <th>127</th>
+      <td>Glen Rice</td>
+      <td>1.0</td>
+      <td>Most likely is a good player</td>
+    </tr>
+    <tr>
+      <th>128</th>
+      <td>Mookie Blaylock</td>
+      <td>1.0</td>
+      <td>Most likely is a good player</td>
+    </tr>
+    <tr>
+      <th>129</th>
+      <td>Sean Elliott</td>
+      <td>1.0</td>
+      <td>Most likely is a good player</td>
+    </tr>
+    <tr>
+      <th>130</th>
+      <td>Blue Edwards</td>
+      <td>1.0</td>
+      <td>Most likely is a good player</td>
+    </tr>
+    <tr>
+      <th>131</th>
+      <td>Cory Jefferson</td>
+      <td>0.0</td>
+      <td>Most likely is a bad player</td>
+    </tr>
+    <tr>
+      <th>132</th>
+      <td>Nick Anderson</td>
+      <td>1.0</td>
+      <td>Most likely is a good player</td>
+    </tr>
+    <tr>
+      <th>133</th>
+      <td>Stacey King</td>
+      <td>1.0</td>
+      <td>Most likely is a good player</td>
+    </tr>
+    <tr>
+      <th>134</th>
+      <td>Dana Barros</td>
+      <td>1.0</td>
+      <td>Most likely is a good player</td>
+    </tr>
+    <tr>
+      <th>135</th>
+      <td>Jeff Martin</td>
+      <td>1.0</td>
+      <td>Most likely is a good player</td>
+    </tr>
+    <tr>
+      <th>136</th>
+      <td>Clifford Robinson</td>
+      <td>1.0</td>
+      <td>Most likely is a good player</td>
+    </tr>
+    <tr>
+      <th>137</th>
+      <td>Winston Bennett</td>
+      <td>1.0</td>
+      <td>Most likely is a good player</td>
+    </tr>
+    <tr>
+      <th>138</th>
+      <td>Chucky Brown</td>
+      <td>1.0</td>
+      <td>Most likely is a good player</td>
+    </tr>
+    <tr>
+      <th>139</th>
+      <td>Michael Ansley</td>
+      <td>1.0</td>
+      <td>Most likely is a good player</td>
+    </tr>
+    <tr>
+      <th>140</th>
+      <td>Todd Lichti</td>
+      <td>1.0</td>
+      <td>Most likely is a good player</td>
+    </tr>
+    <tr>
+      <th>141</th>
+      <td>Noah Vonleh</td>
+      <td>0.0</td>
+      <td>Most likely is a bad player</td>
+    </tr>
+    <tr>
+      <th>142</th>
+      <td>B.J. Armstrong</td>
+      <td>1.0</td>
+      <td>Most likely is a good player</td>
+    </tr>
+    <tr>
+      <th>143</th>
+      <td>Terry Davis</td>
+      <td>1.0</td>
+      <td>Most likely is a good player</td>
+    </tr>
+    <tr>
+      <th>144</th>
+      <td>Shawn Kemp</td>
+      <td>1.0</td>
+      <td>Most likely is a good player</td>
+    </tr>
+    <tr>
+      <th>145</th>
+      <td>Tom Hammonds</td>
+      <td>1.0</td>
+      <td>Most likely is a good player</td>
+    </tr>
+    <tr>
+      <th>146</th>
+      <td>Scott Haffner</td>
+      <td>0.0</td>
+      <td>Most likely is a bad player</td>
+    </tr>
+    <tr>
+      <th>147</th>
+      <td>Randy White</td>
+      <td>0.0</td>
+      <td>Most likely is a bad player</td>
+    </tr>
+    <tr>
+      <th>148</th>
+      <td>Kenny Battle</td>
+      <td>0.0</td>
+      <td>Most likely is a bad player</td>
+    </tr>
+    <tr>
+      <th>149</th>
+      <td>Donald Royal</td>
+      <td>1.0</td>
+      <td>Most likely is a good player</td>
+    </tr>
+    <tr>
+      <th>150</th>
+      <td>Michael Carter-Williams</td>
+      <td>1.0</td>
+      <td>Most likely is a good player</td>
+    </tr>
+    <tr>
+      <th>151</th>
+      <td>Delaney Rudd</td>
+      <td>1.0</td>
+      <td>Most likely is a good player</td>
+    </tr>
+    <tr>
+      <th>152</th>
+      <td>John Morton</td>
+      <td>0.0</td>
+      <td>Most likely is a bad player</td>
+    </tr>
+    <tr>
+      <th>153</th>
+      <td>Greg Grant</td>
+      <td>0.0</td>
+      <td>Most likely is a bad player</td>
+    </tr>
+    <tr>
+      <th>154</th>
+      <td>Doug Roth</td>
+      <td>0.0</td>
+      <td>Most likely is a bad player</td>
+    </tr>
+    <tr>
+      <th>155</th>
+      <td>Byron Irvin</td>
+      <td>1.0</td>
+      <td>Most likely is a good player</td>
+    </tr>
+    <tr>
+      <th>156</th>
+      <td>Michael Smith</td>
+      <td>1.0</td>
+      <td>Most likely is a good player</td>
+    </tr>
+    <tr>
+      <th>157</th>
+      <td>Michael Smith</td>
+      <td>1.0</td>
+      <td>Most likely is a good player</td>
+    </tr>
+    <tr>
+      <th>158</th>
+      <td>Michael Smith</td>
+      <td>1.0</td>
+      <td>Most likely is a good player</td>
+    </tr>
+    <tr>
+      <th>159</th>
+      <td>Michael Smith</td>
+      <td>1.0</td>
+      <td>Most likely is a good player</td>
+    </tr>
+    <tr>
+      <th>160</th>
+      <td>George McCloud</td>
+      <td>0.0</td>
+      <td>Most likely is a bad player</td>
+    </tr>
+    <tr>
+      <th>161</th>
+      <td>Henry Turner</td>
+      <td>0.0</td>
+      <td>Most likely is a bad player</td>
+    </tr>
+    <tr>
+      <th>162</th>
+      <td>Charles Smith</td>
+      <td>1.0</td>
+      <td>Most likely is a good player</td>
+    </tr>
+    <tr>
+      <th>163</th>
+      <td>Charles Smith</td>
+      <td>1.0</td>
+      <td>Most likely is a good player</td>
+    </tr>
+    <tr>
+      <th>164</th>
+      <td>Charles Smith</td>
+      <td>1.0</td>
+      <td>Most likely is a good player</td>
+    </tr>
+    <tr>
+      <th>165</th>
+      <td>Charles Smith</td>
+      <td>1.0</td>
+      <td>Most likely is a good player</td>
+    </tr>
+    <tr>
+      <th>166</th>
+      <td>Charles Smith</td>
+      <td>1.0</td>
+      <td>Most likely is a good player</td>
+    </tr>
+    <tr>
+      <th>167</th>
+      <td>Charles Smith</td>
+      <td>1.0</td>
+      <td>Most likely is a good player</td>
+    </tr>
+    <tr>
+      <th>168</th>
+      <td>Charles Smith</td>
+      <td>0.0</td>
+      <td>Most likely is a bad player</td>
+    </tr>
+    <tr>
+      <th>169</th>
+      <td>Charles Smith</td>
+      <td>0.0</td>
+      <td>Most likely is a bad player</td>
+    </tr>
+    <tr>
+      <th>170</th>
+      <td>Charles Smith</td>
+      <td>0.0</td>
+      <td>Most likely is a bad player</td>
+    </tr>
+    <tr>
+      <th>171</th>
+      <td>Ed Horton</td>
+      <td>1.0</td>
+      <td>Most likely is a good player</td>
+    </tr>
+    <tr>
+      <th>172</th>
+      <td>Trey Burke</td>
+      <td>1.0</td>
+      <td>Most likely is a good player</td>
+    </tr>
+    <tr>
+      <th>173</th>
+      <td>Frank Kornet</td>
+      <td>0.0</td>
+      <td>Most likely is a bad player</td>
+    </tr>
+    <tr>
+      <th>174</th>
+      <td>Doug West</td>
+      <td>0.0</td>
+      <td>Most likely is a bad player</td>
+    </tr>
+    <tr>
+      <th>175</th>
+      <td>Adrian Caldwell</td>
+      <td>1.0</td>
+      <td>Most likely is a good player</td>
+    </tr>
+    <tr>
+      <th>176</th>
+      <td>Kenny Payne</td>
+      <td>0.0</td>
+      <td>Most likely is a bad player</td>
+    </tr>
+    <tr>
+      <th>177</th>
+      <td>Eric Johnson</td>
+      <td>0.0</td>
+      <td>Most likely is a bad player</td>
+    </tr>
+    <tr>
+      <th>178</th>
+      <td>Mike Williams</td>
+      <td>0.0</td>
+      <td>Most likely is a bad player</td>
+    </tr>
+    <tr>
+      <th>179</th>
+      <td>Mike Morrison</td>
+      <td>0.0</td>
+      <td>Most likely is a bad player</td>
+    </tr>
+    <tr>
+      <th>180</th>
+      <td>Nate Johnston</td>
+      <td>0.0</td>
+      <td>Most likely is a bad player</td>
+    </tr>
+    <tr>
+      <th>181</th>
+      <td>Mitch Richmond*</td>
+      <td>1.0</td>
+      <td>Most likely is a good player</td>
+    </tr>
+    <tr>
+      <th>182</th>
+      <td>Willie Anderson</td>
+      <td>1.0</td>
+      <td>Most likely is a good player</td>
+    </tr>
+    <tr>
+      <th>183</th>
+      <td>Victor Oladipo</td>
+      <td>1.0</td>
+      <td>Most likely is a good player</td>
+    </tr>
+    <tr>
+      <th>184</th>
+      <td>Hersey Hawkins</td>
+      <td>1.0</td>
+      <td>Most likely is a good player</td>
+    </tr>
+    <tr>
+      <th>185</th>
+      <td>Kevin Edwards</td>
+      <td>1.0</td>
+      <td>Most likely is a good player</td>
+    </tr>
+    <tr>
+      <th>186</th>
+      <td>Grant Long</td>
+      <td>1.0</td>
+      <td>Most likely is a good player</td>
+    </tr>
+    <tr>
+      <th>187</th>
+      <td>Rex Chapman</td>
+      <td>1.0</td>
+      <td>Most likely is a good player</td>
+    </tr>
+    <tr>
+      <th>188</th>
+      <td>Brian Shaw</td>
+      <td>1.0</td>
+      <td>Most likely is a good player</td>
+    </tr>
+    <tr>
+      <th>189</th>
+      <td>Chris Morris</td>
+      <td>1.0</td>
+      <td>Most likely is a good player</td>
+    </tr>
+    <tr>
+      <th>190</th>
+      <td>Gary Grant</td>
+      <td>1.0</td>
+      <td>Most likely is a good player</td>
+    </tr>
+    <tr>
+      <th>191</th>
+      <td>Vernon Maxwell</td>
+      <td>1.0</td>
+      <td>Most likely is a good player</td>
+    </tr>
+    <tr>
+      <th>192</th>
+      <td>Ben McLemore</td>
+      <td>1.0</td>
+      <td>Most likely is a good player</td>
+    </tr>
+    <tr>
+      <th>193</th>
+      <td>Dan Majerle</td>
+      <td>1.0</td>
+      <td>Most likely is a good player</td>
+    </tr>
+    <tr>
+      <th>194</th>
+      <td>Sylvester Gray</td>
+      <td>1.0</td>
+      <td>Most likely is a good player</td>
+    </tr>
+    <tr>
+      <th>195</th>
+      <td>Ricky Berry</td>
+      <td>1.0</td>
+      <td>Most likely is a good player</td>
+    </tr>
+    <tr>
+      <th>196</th>
+      <td>Tom Garrick</td>
+      <td>1.0</td>
+      <td>Most likely is a good player</td>
+    </tr>
+    <tr>
+      <th>197</th>
+      <td>Michael Anderson</td>
+      <td>0.0</td>
+      <td>Most likely is a bad player</td>
+    </tr>
+    <tr>
+      <th>198</th>
+      <td>Michael Anderson</td>
+      <td>1.0</td>
+      <td>Most likely is a good player</td>
+    </tr>
+  </tbody>
+</table>
+      </center>
+
+      <hr>
+      <hr>
+      <hr>
+
+<p>Edited By Nabil ESSEMLALI IDRISSI</p>
+    </div>
+  </body>
+</html> 
