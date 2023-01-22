@@ -1,5 +1,5 @@
 from flask import Flask
-from API_REST import view
+from Pipeline import view
 
 
 app = Flask(__name__)
