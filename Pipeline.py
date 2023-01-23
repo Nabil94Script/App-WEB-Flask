@@ -47,7 +47,7 @@ def Result():
     if request.method == "POST":
         try:    
 
-                ################## deserialization of the model ###########
+                    ################## deserialization of the model ####
                     model = joblib.load("MyMachine.pkl") 
                     print ('Model loaded',model)
 
@@ -55,7 +55,7 @@ def Result():
                     
                     print ('Model columns loaded')
 
-                ####################################################
+                    ################### Receiving ######################
                     file= request.files["dataplayer"]
                     file.save(os.path.join("Uploads",file.filename))
                     file.name
@@ -66,13 +66,16 @@ def Result():
                     Col_set = df['Name'].values.tolist()
                     df_val= df.drop(['Name'],axis=1).values
                     
-                        
+                    ############### Transformation#########################
                     for x in np.argwhere(np.isnan(df_val)):
                         df_val[x]=0.0
                     Norma_set=MinMaxScaler().fit_transform(df_val)
+                    
+                    ################ Prediction ###########################
 
                     prediction = list(model.predict(Norma_set))  
-
+                     
+                    ################## Loading result to new DataFrame#######
                     dplayer = pd.DataFrame ([Col_set,prediction]).transpose()
                     dplayer.columns=['Name_player','Preduction'] 
                     dplayer['comment']=" "
@@ -82,12 +85,12 @@ def Result():
                         else :
                             dplayer['comment'][i]="Most likely is a bad player"
                     
-
+                    
+                    ################## Display Result on HTML page############
+                    
                     res=dplayer.to_html()
 
-                    
-
-                    ################################################
+                    ##########################################################
                     
                     with open (r"templates\result.html") as htmlR:
                          htmlR=htmlR.read()
