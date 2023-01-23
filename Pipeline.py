@@ -4,7 +4,6 @@ import traceback
 import numpy as np
 import pandas as pd 
 import os
-from sklearn.ensemble import RandomForestClassifier
 import joblib
 from sklearn.preprocessing import MinMaxScaler
 
