@@ -47,7 +47,7 @@ def Result():
     if request.method == "POST":
         try:    
 
-                ################## Diserilizing our model ###########
+                ################## deserialization of the model ###########
                     model = joblib.load("MyMachine.pkl") 
                     print ('Model loaded',model)
 
